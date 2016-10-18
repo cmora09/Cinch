@@ -1,39 +1,10 @@
 body{
 	font-family: 'Cabin', sans-serif;
 }
-
-#domLat{
-	display: none;
-}
-#domLong{
-	display: none;
-}
-.navbar-brand{
-	color:#F18F01 !important;
-}
-.meal-title{
-	color: #545F69;
-}
-.choices{
-	height: 500px;
-	margin-bottom: 0;
-}
-.choice-btn{
-	background-color: #F18F01;
-	border: solid 1px #222222;
-	margin-bottom: 5px;
-}
-
-.yelp-img{
-	border-radius: 5px;
-	border: solid 1px #222222 ;
-	max-width: 90%;
-	max-height: 50%;
-}
-
 .main{
 	color:white;
-	height: 450px;
+	height: 500px;
+	margin: 0;
 	
 /*	background-repeat: no-repeat;
 	background-image: url(/images/main.jpeg)*/
@@ -47,7 +18,81 @@ body{
 }
 
 
-/*queries*/
+.affix {
+  top: 0;
+  width: 100%;
+}
+
+.affix + .container-fluid {
+  padding-top: 50px;
+}
+.navbar{
+	z-index: 1000;
+	margin: 0;
+}
+
+.navbar-brand{
+	color: #F18F01 !important;
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+}
+#breakfast{
+	background-color: #E5BEED;
+}
+#lunch{
+	background-color: #C7D6E9;
+}
+#dinner{
+	background-color: #C5C2C4;
+}
+#dessert{
+	background-color: #AE76A6;
+}
+.meal-title{
+	margin: 0;
+	color: #545F69;
+}
+
+.restaurant-link:hover{
+	color: white;
+}
+.col-xs-12{
+	padding: 0;
+}
+.spin{
+	text-align:middle;
+	position: relative;
+	max-height: 100%;
+}
+.choices{
+	padding: 15px;
+	height: 600px;
+}
+.choice-btn{
+	background-color: #F18F01;
+	border: solid 1px #222222;
+	margin-bottom: 5px;
+}
+.img-responsive{
+	margin: 0 auto;
+}
+.yelp-img{
+	max-height: 25%;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: solid 1px #222222 ;
+}
+.footer{
+	background-color: #F8F8F8;
+}
+.powered-yelp{
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+	height: 50px;
+	width: 175px;
+}
 
 
 
