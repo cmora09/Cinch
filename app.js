@@ -28,19 +28,16 @@ app.get('/', function (req, res) {
 
 //breakfast ajax
 app.post('/yelp-results-breakfast', function(req,res){
-	console.log(req.body.latlng)
 	secureYelp.search({ 
 		term: 'food', 
 		ll: req.body.latlng, 
 		radius_filter: 9656,    //6 miles
 		sort: 1,
 		category_filter: 'breakfast_brunch'
-		// offset: randomizeResults
 	})
 	.then(function (data) {
 		var businesses = data.businesses;
 		var random = Math.floor((Math.random() * businesses.length));
-		console.log(businesses.length + ' ' + 'len')
 		var result = businesses[random];
 		var resultInfo = 
 			{
@@ -61,8 +58,9 @@ app.post('/yelp-results-breakfast', function(req,res){
 app.post('/yelp-results-lunch', function(req,res){
 	secureYelp.search({ 
 		term: 'food', 
-		ll: req.body.latlng
-		// offset: randomizeResults
+		ll: req.body.latlng,
+		radius_filter: 9656,    //6 miles
+		sort: 1	
 	})
 	.then(function (data) {
 		var businesses = data.businesses;
