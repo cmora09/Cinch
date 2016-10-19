@@ -2,8 +2,12 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
 var Yelp = require('yelp');
-var config = require('./config');
-var secureYelp = new Yelp(config);
+var secureYelp = new Yelp({
+	consumer_key: process.env.yelp_consumer_key,
+	consumer_secret: process.env.yelp_consumer_secret,
+	token: process.env.yelp_token,
+	token_secret: process.env.yelp_token_secret,
+});
 
 // var randomizeResults = Math.floor(Math.random() * 20);
 
