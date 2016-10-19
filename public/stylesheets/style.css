@@ -5,7 +5,6 @@ body{
 	color:white;
 	height: 500px;
 	margin: 0;
-	
 /*	background-repeat: no-repeat;
 	background-image: url(/images/main.jpeg)*/
 	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg')no-repeat 100% 100%;
@@ -13,7 +12,7 @@ body{
 	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg') no-repeat;
 	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg')no-repeat;
 	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg') no-repeat;
-	background: linear-gradient(to bottom, rgba(241, 143, 1, .8) 0%, rgba(0, 0, 0, .6) 59%, rgba(0, 0, 0, 0.5) 100%), url('/images/main.jpeg') 50% 50% no-repeat;
+	background: linear-gradient(to bottom, rgba(241, 143, 1, .8) 0%, rgba(0, 0, 0, .6) 59%, rgba(255, 255, 255, 0.5) 100%), url('/images/main.jpeg') 50% 50% no-repeat;
 	background-size: cover;
 }
 
@@ -26,29 +25,7 @@ body{
 .affix + .container-fluid {
   padding-top: 50px;
 }
-.navbar{
-	z-index: 1000;
-	margin: 0;
-}
 
-.navbar-brand{
-	color: #F18F01 !important;
-	transform: translateX(-50%);
-	left: 50%;
-	position: absolute;
-}
-#breakfast{
-	background-color: #E5BEED;
-}
-#lunch{
-	background-color: #C7D6E9;
-}
-#dinner{
-	background-color: #C5C2C4;
-}
-#dessert{
-	background-color: #AE76A6;
-}
 .meal-title{
 	margin: 0;
 	color: #545F69;
@@ -74,9 +51,11 @@ body{
 	border: solid 1px #222222;
 	margin-bottom: 5px;
 }
+/*to keep yelp images stable*/
 .img-responsive{
 	margin: 0 auto;
 }
+/*keeps yelp images from growing to large and distorting divs*/
 .yelp-img{
 	max-height: 25%;
 	margin-bottom: 10px;
