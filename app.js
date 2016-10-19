@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 
+var port = process.env.PORT || 3000;
 /*these are categories we can add to our search
 	
 	category_filter: "breakfast_brunch"
@@ -140,6 +141,6 @@ app.post('/yelp-results-desserts', function(req,res){
 	});
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('All Right! Thats Cool!');
 });
