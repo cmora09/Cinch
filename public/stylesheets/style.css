@@ -1,29 +1,5 @@
 body{
-	font-family: 'Cabin', sans-serif;
-}
-.main{
-	color:white;
-	height: 100vh;
-	margin: 0;
-/*	background-repeat: no-repeat;
-	background-image: url(/images/main.jpeg)*/
-	background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg')no-repeat 100% 100%;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('/images/main.jpeg') no-repeat;
-	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg') no-repeat;
-	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg')no-repeat;
-	background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('/images/main.jpeg') no-repeat;
-	background: linear-gradient(to bottom, rgba(241, 143, 1, .8) 0%, rgba(0, 0, 0, .6) 59%, rgba(255, 255, 255, 0.5) 100%), url('/images/main.jpeg') 50% 50% no-repeat;
-	background-size: cover;
-}
-
-
-.affix {
-  top: 0;
-  width: 100%;
-}
-
-.affix + .container-fluid {
-  padding-top: 50px;
+	/*font-family: 'Cabin', sans-serif;*/
 }
 
 .meal-title{
@@ -57,7 +33,6 @@ body{
 }
 .choice-btn{
 	background-color: #F18F01;
-	border: solid 1px #222222;
 	margin-bottom: 5px;
 }
 /*to keep yelp images stable*/
@@ -71,9 +46,7 @@ body{
 	border-radius: 5px;
 	border: solid 1px #222222 ;
 }
-.footer{
-	background-color: #F8F8F8;
-}
+
 .powered-yelp{
 	transform: translateX(-50%);
 	left: 50%;

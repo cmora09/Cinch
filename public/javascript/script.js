@@ -48,6 +48,7 @@ $(document).ready(function(){
 
 		var latlng = userLat + ',' + userLong;
 
+
 		//loads first choices
 		breakfastAjax();
 		lunchAjax();
