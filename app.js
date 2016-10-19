@@ -11,8 +11,6 @@ var secureYelp = new Yelp({
 	  token_secret: process.env.token_secret
 	});
 
-// var randomizeResults = Math.floor(Math.random() * 20);
-
 //set ejs to default engine
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
@@ -35,9 +33,9 @@ app.get('/', function (req, res) {
 
 //breakfast ajax
 app.post('/yelp-results-breakfast', function(req,res){
-	secureYelp.search({ 
-		term: 'food', 
-		ll: req.body.latlng, 
+	secureYelp.search({
+		term: 'food',
+		ll: req.body.latlng,
 		radius_filter: 9656,    //6 miles
 		sort: 1,
 		category_filter: 'breakfast_brunch'
@@ -45,11 +43,13 @@ app.post('/yelp-results-breakfast', function(req,res){
 	.then(function (data) {
 		var businesses = data.businesses;
 		var random = Math.floor((Math.random() * businesses.length));
+		// console.log(businesses.length + ' ' + 'len')
 		var result = businesses[random];
-		var resultInfo = 
+		console.log(result);
+		var resultInfo =
 			{
 			name: result.name,
-			img: result.image_url.replace("ms.jpg", "l.jpg"),
+			img: result.image_url.replace('ms', 'l'),
 			numOfReviews: result.review_count,
 			rating: result.rating_img_url_large,
 			distance: metersToMiles(result.distance),
@@ -73,10 +73,10 @@ app.post('/yelp-results-lunch', function(req,res){
 		var businesses = data.businesses;
 		var random = Math.floor((Math.random() * businesses.length));
 		var result = businesses[random];
-		var resultInfo = 
+		var resultInfo =
 			{
 			name: result.name,
-			img: result.image_url.replace("ms.jpg", "l.jpg"),
+			img: result.image_url.replace('ms', 'l'),
 			numOfReviews: result.review_count,
 			rating: result.rating_img_url_large,
 			distance: metersToMiles(result.distance),
@@ -91,8 +91,8 @@ app.post('/yelp-results-lunch', function(req,res){
 });
 
 app.post('/yelp-results-dinner', function(req,res){
-	secureYelp.search({ 
-		term: 'food', 
+	secureYelp.search({
+		term: 'food',
 		ll: req.body.latlng,
 		radius_filter: 9656,
 		sort: 1,
@@ -102,10 +102,10 @@ app.post('/yelp-results-dinner', function(req,res){
 		var businesses = data.businesses;
 		var random = Math.floor((Math.random() * businesses.length));
 		var result = businesses[random];
-		var resultInfo = 
+		var resultInfo =
 			{
 			name: result.name,
-			img: result.image_url.replace("ms.jpg", "l.jpg"),
+			img: result.image_url.replace('ms', 'l'),
 			numOfReviews: result.review_count,
 			rating: result.rating_img_url_large,
 			distance: metersToMiles(result.distance),
@@ -119,21 +119,21 @@ app.post('/yelp-results-dinner', function(req,res){
 	});
 });
 app.post('/yelp-results-desserts', function(req,res){
-	secureYelp.search({ 
-		term: 'food', 
+	secureYelp.search({
+		term: 'food',
 		ll: req.body.latlng,
 		radius_filter: 9656,
 		sort: 1,
-		category_filter: 'desserts' 
+		category_filter: 'desserts'
 	})
 	.then(function(data) {
 		var businesses = data.businesses;
 		var random = Math.floor((Math.random() * businesses.length));
 		var result = businesses[random];
-		var resultInfo = 
+		var resultInfo =
 			{
 			name: result.name,
-			img: result.image_url.replace("ms.jpg", "l.jpg"),
+			img: result.image_url.replace('ms', 'l'),
 			numOfReviews: result.review_count,
 			rating: result.rating_img_url_large,
 			distance: metersToMiles(result.distance),
@@ -150,3 +150,4 @@ app.post('/yelp-results-desserts', function(req,res){
 app.listen(port, function () {
   console.log('All Right! Thats Cool!');
 });
+// var randomizeResults = Math.floor(Math.random() * 20);

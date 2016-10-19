@@ -1,5 +1,13 @@
+*{font-family: 'Open Sans', sans-serif;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+
 body{
-	/*font-family: 'Cabin', sans-serif;*/
+	font-size: 1em;
+	/*background-color: #f2f0eb;*/
 }
 
 .meal-title{
@@ -34,11 +42,20 @@ body{
 .choice-btn{
 	background-color: #F18F01;
 	margin-bottom: 5px;
+html{
+	font-size: 100%;        /*Solves IE problem*/
+}
+
+h2, h3{
+	color: white;
+}
+
+.choices{
+	height: 32.500em;
+	font-weight: bold;
 }
 /*to keep yelp images stable*/
-.img-responsive{
-	margin: 0 auto;
-}
+
 /*keeps yelp images from growing to large and distorting divs*/
 .yelp-img{
 	max-height: 25%;
@@ -53,4 +70,77 @@ body{
 	position: absolute;
 	height: 50px;
 	width: 175px;
+	border-radius: 0.313em;
+	max-width: 12em;
+	min-height: 12em;
+}
+
+img{
+	margin-top: 2em;
+}
+
+.infoname{
+	margin: 0.7em 0em 0.7em 0em;
+}
+
+.circle-cartoon-img{
+	border-radius: 5em;
+	height: 8.8em;
+	width: 8.8em;
+	margin-bottom: 1em;
+}
+
+.btn {
+	margin-bottom: 1em;
+}
+
+.main{
+	color:white;
+	height: 100vh;
+	/*background-color: #2292A4;*/
+	background-color: #c5c2c4;
+	margin-top: -3em;
+	background-size: cover;
+}
+
+.navbar{
+	background-color:  #FF7F0E;
+}
+
+.breakfast-bg{
+	background-color: #C6DEA6;
+}
+.lunch-bg{
+	background-color: #1B998B;
+}
+.dinner-bg{
+	background-color: #7EBDC3;
+}
+.dessert-bg	{
+	background-color: #114B5F;
+}
+
+.col-xs-12{
+	padding: 0;
+}
+
+footer{
+	margin-top: 1em;
+}
+.footer_yelp_logo{
+	height: 3em;
+	width: 9em;
+	margin-top: -1em;
+}
+
+.display-1{
+	margin-left: -1.5em;
+}
+
+.cinch_span{
+	font-family: 'Suez One', serif;
+	position: absolute;
+	-ms-transform: rotate(-7deg); /* IE 9 */
+	-webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+	transform: rotate(-7deg);
 }

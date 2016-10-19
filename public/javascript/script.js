@@ -37,6 +37,7 @@ $(document).ready(function(){
 	    	console.log("Geolocation is not supported by this browser.");
 		}
 	};
+
 	function success(position){
 		var breakfastDiv= $('#breakfast');
 		var lunchDiv= $('#lunch');
@@ -48,13 +49,12 @@ $(document).ready(function(){
 
 		var latlng = userLat + ',' + userLong;
 
-
 		//loads first choices
 		breakfastAjax();
 		lunchAjax();
 		dinnerAjax();
 		dessertAjax();
-	
+
 		// ajax calls
 		function breakfastAjax(){
 			spinDiv.spin(opts);
@@ -69,14 +69,16 @@ $(document).ready(function(){
 					breakfastDiv.html('\
 						<h1 class="meal-title">Breakfast</h1>\
 						<a class="restaurant-link" href="' + info.url +'"</a>\
-						<h2>' + info.name + '</h2></a>\
+						<h2 class="infoname">' + info.name + '</h2></a>\
 						<img class="yelp-img img-responsive" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
+						<img class="img-responsive" src="' + info.rating + '">\
+						<h3>'+ info.numOfReviews +' Reviews</h3>\
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info breakfast-btn choice-btn">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
+
 				}
 			});
 		};
@@ -95,7 +97,7 @@ $(document).ready(function(){
 						<a class="restaurant-link" href="' + info.url +'"</a>\
 						<h3>' + info.name + '</h3></a>\
 						<img class="img-responsive yelp-img" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
+						<img class="img-responsive" src="' + info.rating + '"><h3>'+ info.numOfReviews +' Reviews</h3>\
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="snippet text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info lunch-btn choice-btn">New choice?</button>\
@@ -119,7 +121,7 @@ $(document).ready(function(){
 						<a class="restaurant-link" href="' + info.url +'"</a>\
 						<h3>' + info.name + '</h3></a>\
 						<img class="yelp-img img-responsive" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
+						<img class="img-responsive" src="' + info.rating + '"><h3>'+ info.numOfReviews +' Reviews</h3>\
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info dinner-btn choice-btn">New choice?</button>\
@@ -143,7 +145,7 @@ $(document).ready(function(){
 						<a class="restaurant-link" href="' + info.url +'"</a>\
 						<h3>' + info.name + '</h3></a>\
 						<img class="yelp-img img-responsive" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
+						<img class="img-responsive" src="' + info.rating + '"><h3>'+ info.numOfReviews +' Reviews</h3>\
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info dessert-btn choice-btn">New choice?</button>\
@@ -162,4 +164,4 @@ $(document).ready(function(){
 		$('#dessert').on('click','.dessert-btn', dessertAjax);
 	};
 
-});	
+});
