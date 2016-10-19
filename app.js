@@ -1,13 +1,15 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var dotEnv= require('dotenv').config();
+
 var Yelp = require('yelp');
 var secureYelp = new Yelp({
-	consumer_key: process.env.yelp_consumer_key,
-	consumer_secret: process.env.yelp_consumer_secret,
-	token: process.env.yelp_token,
-	token_secret: process.env.yelp_token_secret,
-});
+	  consumer_key: process.env.consumer_key,
+	  consumer_secret: process.env.consumer_secret,
+	  token: process.env.token,
+	  token_secret: process.env.token_secret
+	});
 
 // var randomizeResults = Math.floor(Math.random() * 20);
 
