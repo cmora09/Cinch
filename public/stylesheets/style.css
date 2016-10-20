@@ -30,7 +30,9 @@ body{
 	margin: 0;
 	color: #545F69;
 }
-
+.loc-btn{
+	font-size: 1.5em;
+}
 .col-xs-12{
 	padding: 0;
 }

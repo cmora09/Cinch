@@ -21,9 +21,14 @@ $(document).ready(function(){
 		shadow: false, // Whether to render a shadow
 		hwaccel: false, // Whether to use hardware acceleration
 	}
+	var spinDiv = $('.spin');
 
+	$('.loc-btn').on('click', function(e){
+		e.preventDefault();
+		spinDiv.spin(opts);
+		getLocation();
+	});
 	//geolocation
-	getLocation();
 	function getLocation(){
 		if (navigator.geolocation){
 		    navigator.geolocation.getCurrentPosition(success);
@@ -36,7 +41,6 @@ $(document).ready(function(){
 		var lunchDiv= $('#lunch');
 		var dinnerDiv= $('#dinner');
 		var dessertDiv= $('#dessert');
-		var spinDiv = $('.spin');
 
 		var userLat = position.coords.latitude;
 		var userLong = position.coords.longitude;
