@@ -3,7 +3,7 @@ body{
 }
 .main{
 	color:white;
-	height: 500px;
+	height: 100vh;
 	margin: 0;
 /*	background-repeat: no-repeat;
 	background-image: url(/images/main.jpeg)*/
@@ -31,7 +31,11 @@ body{
 	color: #545F69;
 }
 .loc-btn{
+	background-color: #F18F01;
 	font-size: 1.5em;
+}
+.loc-btn:hover{
+	background-color: white; 
 }
 .col-xs-12{
 	padding: 0;
