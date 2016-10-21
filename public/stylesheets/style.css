@@ -49,6 +49,12 @@ body{
 	padding: 15px;
 	height: 600px;
 }
+#lunch{
+	background-color: #efefef;
+}
+#dessert{
+	background-color: #efefef;
+}
 .choice-btn{
 	background-color: #F18F01;
 	border: solid 1px #222222;
