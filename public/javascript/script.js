@@ -21,9 +21,15 @@ $(document).ready(function(){
 		shadow: false, // Whether to render a shadow
 		hwaccel: false, // Whether to use hardware acceleration
 	}
+	var spinDiv = $('.spin');
 
+	$('.loc-btn').on('click', function(e){
+		e.preventDefault();
+		spinDiv.spin(opts);
+		getLocation();
+		$('.loc-btn').fadeOut(900,"swing");
+	});
 	//geolocation
-	getLocation();
 	function getLocation(){
 		if (navigator.geolocation){
 		    navigator.geolocation.getCurrentPosition(success);
@@ -36,7 +42,6 @@ $(document).ready(function(){
 		var lunchDiv= $('#lunch');
 		var dinnerDiv= $('#dinner');
 		var dessertDiv= $('#dessert');
-		var spinDiv = $('.spin');
 
 		var userLat = position.coords.latitude;
 		var userLong = position.coords.longitude;
@@ -59,6 +64,7 @@ $(document).ready(function(){
 				data: JSON.stringify({latlng: latlng}),
 				success: function(response){
 					var info = response.resultInfo;
+					breakfastDiv.hide();
 					breakfastDiv.html('\
 						<h1 class="meal-title">Breakfast</h1>\
 						<a class="restaurant-link" href="' + info.url +'"</a>\
@@ -68,7 +74,7 @@ $(document).ready(function(){
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info breakfast-btn choice-btn">New choice?</button>\
-					');
+					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
 			});
@@ -82,6 +88,7 @@ $(document).ready(function(){
 				data: JSON.stringify({latlng: latlng}),
 				success: function(res){
 					var info = res.resultInfo;
+					lunchDiv.hide();
 					lunchDiv.html('\
 						<h1 class="meal-title">Lunch</h1>\
 						<a class="restaurant-link" href="' + info.url +'"</a>\
@@ -91,7 +98,7 @@ $(document).ready(function(){
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="snippet text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info lunch-btn choice-btn">New choice?</button>\
-					');
+					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
 			});
@@ -105,6 +112,7 @@ $(document).ready(function(){
 				data: JSON.stringify({latlng: latlng}),
 				success: function(response){
 					var info = response.resultInfo;
+					dinnerDiv.hide();
 					dinnerDiv.html('\
 						<h1 class="meal-title">Dinner</h1>\
 						<a class="restaurant-link" href="' + info.url +'"</a>\
@@ -114,7 +122,7 @@ $(document).ready(function(){
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info dinner-btn choice-btn">New choice?</button>\
-					');
+					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
 			});
@@ -128,6 +136,7 @@ $(document).ready(function(){
 				data: JSON.stringify({latlng: latlng}),
 				success: function(res){
 					var info = res.resultInfo;
+					dessertDiv.hide();
 					dessertDiv.html('\
 						<h1 class="meal-title">Dessert</h1>\
 						<a class="restaurant-link" href="' + info.url +'"</a>\
@@ -137,7 +146,7 @@ $(document).ready(function(){
 						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
 						<p class="text-center snippet">' + info.snippet + '</p>\
 						<button class="btn btn-info dessert-btn choice-btn">New choice?</button>\
-					');
+					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
 			});
