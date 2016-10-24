@@ -16,8 +16,8 @@ $(document).ready(function(){
 		fps: 20, // Frames per second when using setTimeout() as a fallback for CSS
 		zIndex: 2e9, // The z-index (defaults to 2000000000)
 		className: 'spinner', // The CSS class to assign to the spinner
-		top: '125%', // Top position relative to parent
-		left: '30%', // Left position relative to parent
+		top: '100%', // Top position relative to parent
+		left: '50%', // Left position relative to parent
 		shadow: false, // Whether to render a shadow
 		hwaccel: false, // Whether to use hardware acceleration
 	}
@@ -37,11 +37,12 @@ $(document).ready(function(){
 	    	console.log("Geolocation is not supported by this browser.");
 		}
 	};
+
 	function success(position){
-		var breakfastDiv= $('#breakfast');
-		var lunchDiv= $('#lunch');
-		var dinnerDiv= $('#dinner');
-		var dessertDiv= $('#dessert');
+		var breakfastDiv= $('.breakfast-bg');
+		var lunchDiv= $('.lunch-bg');
+		var dinnerDiv= $('.dinner-bg');
+		var dessertDiv= $('.dessert-bg');
 
 		var userLat = position.coords.latitude;
 		var userLong = position.coords.longitude;
@@ -53,7 +54,7 @@ $(document).ready(function(){
 		lunchAjax();
 		dinnerAjax();
 		dessertAjax();
-	
+
 		// ajax calls
 		function breakfastAjax(){
 			spinDiv.spin(opts);
@@ -66,14 +67,15 @@ $(document).ready(function(){
 					var info = response.resultInfo;
 					breakfastDiv.hide();
 					breakfastDiv.html('\
-						<h1 class="meal-title">Breakfast</h1>\
-						<a class="restaurant-link" href="' + info.url +'"</a>\
-						<h2>' + info.name + '</h2></a>\
-						<img class="yelp-img img-responsive" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
-						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
-						<p class="text-center snippet">' + info.snippet + '</p>\
-						<button class="btn btn-info breakfast-btn choice-btn">New choice?</button>\
+						<h2 class="meal-type">BREAKFAST</h2>\
+						<a href="' + info.url +'"</a>\
+						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
+						<h3>'+ info.numOfReviews +' Reviews</h3>\
+						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
+						<br><img class="rating-stars-img" src="' + info.rating + '">\
+						<h4 class="text-left snippet info-snippet">' + info.snippet + '</h4>\
+						<button class="btn breakfast-btn ">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
@@ -90,14 +92,15 @@ $(document).ready(function(){
 					var info = res.resultInfo;
 					lunchDiv.hide();
 					lunchDiv.html('\
-						<h1 class="meal-title">Lunch</h1>\
-						<a class="restaurant-link" href="' + info.url +'"</a>\
-						<h3>' + info.name + '</h3></a>\
-						<img class="img-responsive yelp-img" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
-						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
-						<p class="snippet text-center snippet">' + info.snippet + '</p>\
-						<button class="btn btn-info lunch-btn choice-btn">New choice?</button>\
+						<h2 class="meal-type">LUNCH</h2>\
+						<a href="' + info.url +'"</a>\
+						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
+						<h3>'+ info.numOfReviews +' Reviews</h3>\
+						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
+						<br><img class="rating-stars-img" src="' + info.rating + '">\
+						<h4 class="text-left snippet">' + info.snippet + '</h4>\
+						<button class="btn lunch-btn">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
@@ -114,14 +117,15 @@ $(document).ready(function(){
 					var info = response.resultInfo;
 					dinnerDiv.hide();
 					dinnerDiv.html('\
-						<h1 class="meal-title">Dinner</h1>\
-						<a class="restaurant-link" href="' + info.url +'"</a>\
-						<h3>' + info.name + '</h3></a>\
-						<img class="yelp-img img-responsive" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
-						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
-						<p class="text-center snippet">' + info.snippet + '</p>\
-						<button class="btn btn-info dinner-btn choice-btn">New choice?</button>\
+						<h2 class="meal-type">DINNER</h2>\
+						<a href="' + info.url +'"</a>\
+						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
+						<h3>'+ info.numOfReviews +' Reviews</h3>\
+						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
+						<br><img class="rating-stars-img" src="' + info.rating + '">\
+						<h4 class="text-left snippet">' + info.snippet + '</h4>\
+						<button class="btn dinner-btn">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
@@ -138,27 +142,28 @@ $(document).ready(function(){
 					var info = res.resultInfo;
 					dessertDiv.hide();
 					dessertDiv.html('\
-						<h1 class="meal-title">Dessert</h1>\
-						<a class="restaurant-link" href="' + info.url +'"</a>\
-						<h3>' + info.name + '</h3></a>\
-						<img class="yelp-img img-responsive" src="'+info.img + '">\
-						<img class="img-responsive" src="' + info.rating + '"><h3>'+'Number of Reviews: '+ info.numOfReviews +'</h3>\
-						<h3 class="text-center">'+ 'Distance: ' + info.distance + ' miles away' + '</h3>\
-						<p class="text-center snippet">' + info.snippet + '</p>\
-						<button class="btn btn-info dessert-btn choice-btn">New choice?</button>\
+						<h2 class="meal-type">DESSERT</h2>\
+						<a href="' + info.url +'"</a>\
+						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
+						<h3>'+ info.numOfReviews +' Reviews</h3>\
+						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
+						<br><img class="rating-stars-img" src="' + info.rating + '">\
+						<h4 class="text-left snippet">' + info.snippet + '</h4>\
+						<button class="btn dessert-btn">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
 				}
 			});
 		}
 		// //breakfast choice
-		$('#breakfast').on('click','.breakfast-btn', breakfastAjax);
+		$('.breakfast-bg').on('click','.breakfast-btn', breakfastAjax);
 		// // //lunch choice
-		$('#lunch').on('click','.lunch-btn', lunchAjax);
+		$('.lunch-bg').on('click','.lunch-btn', lunchAjax);
 		// //dinner choice
-		$('#dinner').on('click','.dinner-btn', dinnerAjax);
+		$('.dinner-bg').on('click','.dinner-btn', dinnerAjax);
 		// //dessert choice
-		$('#dessert').on('click','.dessert-btn', dessertAjax);
+		$('.dessert-bg').on('click','.dessert-btn', dessertAjax);
 	};
 
-});	
+});
