@@ -16,7 +16,7 @@ $(document).ready(function(){
 		fps: 20, // Frames per second when using setTimeout() as a fallback for CSS
 		zIndex: 2e9, // The z-index (defaults to 2000000000)
 		className: 'spinner', // The CSS class to assign to the spinner
-		top: '125%', // Top position relative to parent
+		top: '100%', // Top position relative to parent
 		left: '50%', // Left position relative to parent
 		shadow: false, // Whether to render a shadow
 		hwaccel: false, // Whether to use hardware acceleration
