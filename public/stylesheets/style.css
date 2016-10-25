@@ -116,25 +116,29 @@ h4{
 .breakfast-bg{
 	background-color: rgb(224, 211, 222);
 	margin-bottom: 30px;
+	height: 575px;
 }
 .lunch-bg{
 	background-color: rgb(162, 221, 166);
 	margin-bottom: 30px;
+	height: 575px;
 }
 .dinner-bg{
 	background-color: rgba(17,75,95, 0.5);
 	margin-bottom: 30px;
+	height: 575px;
 }
 .dessert-bg	{
 	background-color: rgba(255, 102, 102, 0.6);
 	margin-bottom: 30px;
+	height: 575px;
 }
 
 .breakfast-btn, .lunch-btn, .dinner-btn, .dessert-btn{
 	width: 12em;
 	background-color: #333333;
 	color: white;
-	/*margin-top: 4em;*/
+	margin-top: 2em;
 	margin-bottom: 2em;
 }
 

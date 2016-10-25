@@ -74,7 +74,7 @@ $(document).ready(function(){
 						<h3>'+ info.numOfReviews +' Reviews</h3>\
 						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
 						<br><img class="rating-stars-img" src="' + info.rating + '">\
-						<h4 class="text-left snippet info-snippet">' + info.snippet + '</h4>\
+						<h4 class="text-left snippet">' + info.snippet + '</h4>\
 						<button class="btn breakfast-btn ">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
