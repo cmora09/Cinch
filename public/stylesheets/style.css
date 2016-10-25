@@ -35,7 +35,7 @@ h3{
 	padding: 15px;
 }
 
-.line-1{           
+.line-1{         
 	font-size: 3.5em;
 	font-family: 'Oswald', sans-serif;
 	letter-spacing: .05em;
@@ -89,6 +89,7 @@ h4{
 .cta-button {
 	background-color: #ff8c00;
 	margin-top: 2em;
+	width: 10em;
 	border: 1.5px white solid;
 	color: white;
 	font-family: 'Oswald', sans-serif;
@@ -106,7 +107,7 @@ h4{
 
 .main{
 	color:white;
-	height: 100vh;
+	height: 575px;
     /*margin: 0;*/
     background-image: url("../images/main1.jpg");
 	background-size: cover;
@@ -181,14 +182,3 @@ h4{
 		body{margin-right: -0.7em;}
 }
 
-
-/*background-color: #2292A4;
-background-color: #c5c2c4;
-background-color: #C6DEA6;
-background-color: #1B998B;
-background-color: rgb(254,140,104);
-background-color: #e6e6ff;
-background-color: #7EBDC3;
-background-color: rgba(17,75,95, 0.8);
-background-color: #114B5F;
-background-color: rgba(241,217,101, 0.6);*/
