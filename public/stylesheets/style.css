@@ -168,6 +168,10 @@ h4{
 	font-size: 1em;
 }
 
+footer a {
+	color: black;
+}
+
 .choices{
 	height: 400px;
 }
