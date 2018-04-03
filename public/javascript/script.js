@@ -67,14 +67,14 @@ $(document).ready(function(){
 					var info = response.resultInfo;
 					breakfastDiv.hide();
 					breakfastDiv.html('\
-						<h2 class="meal-type">BREAKFAST</h2>\
-						<a href="' + info.url +'"</a>\
-						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="panel-heading">BREAKFAST</div>\
 						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
-						<h3>'+ info.numOfReviews +' Reviews</h3>\
-						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
-						<br><img class="rating-stars-img" src="' + info.rating + '">\
-						<h4 class="text-left snippet">' + info.snippet + '</h4>\
+						<a href="' + info.url +'"</a>\
+						<h4 class="business-name">' + info.name + '</h4></a>\
+						<h5>'+ info.numOfReviews +' Reviews</h5>\
+						<h5>'+ info.distance + ' Miles away' + '</h5>\
+						<img class="rating-stars-img" src="' + info.rating + '">\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
 						<button class="btn breakfast-btn ">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
@@ -92,14 +92,14 @@ $(document).ready(function(){
 					var info = res.resultInfo;
 					lunchDiv.hide();
 					lunchDiv.html('\
-						<h2 class="meal-type">LUNCH</h2>\
-						<a href="' + info.url +'"</a>\
-						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="panel-heading">LUNCH</div>\
 						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
-						<h3>'+ info.numOfReviews +' Reviews</h3>\
-						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
-						<br><img class="rating-stars-img" src="' + info.rating + '">\
-						<h4 class="text-left snippet">' + info.snippet + '</h4>\
+						<a href="' + info.url +'"</a>\
+						<h4 class="business-name">' + info.name + '</h4></a>\
+						<h5>'+ info.numOfReviews +' Reviews</h5>\
+						<h5>'+ info.distance + ' Miles away' + '</h5>\
+						<img class="rating-stars-img" src="' + info.rating + '">\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
 						<button class="btn lunch-btn">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
@@ -117,14 +117,14 @@ $(document).ready(function(){
 					var info = response.resultInfo;
 					dinnerDiv.hide();
 					dinnerDiv.html('\
-						<h2 class="meal-type">DINNER</h2>\
-						<a href="' + info.url +'"</a>\
-						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="panel-heading">DINNER</div>\
 						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
-						<h3>'+ info.numOfReviews +' Reviews</h3>\
-						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
-						<br><img class="rating-stars-img" src="' + info.rating + '">\
-						<h4 class="text-left snippet">' + info.snippet + '</h4>\
+						<a href="' + info.url +'"</a>\
+						<h4 class="business-name">' + info.name + '</h4></a>\
+						<h5>'+ info.numOfReviews +' Reviews</h5>\
+						<h5>'+ info.distance + ' Miles away' + '</h5>\
+						<img class="rating-stars-img" src="' + info.rating + '">\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
 						<button class="btn dinner-btn">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
@@ -142,14 +142,14 @@ $(document).ready(function(){
 					var info = res.resultInfo;
 					dessertDiv.hide();
 					dessertDiv.html('\
-						<h2 class="meal-type">DESSERT</h2>\
-						<a href="' + info.url +'"</a>\
-						<h2 class="infoname">' + info.name + '</h2></a>\
+						<div class="panel-heading">DESSERT</div>\
 						<div class="yelp-img-cont"><img class="yelp-img" src="'+info.img + '"></div>\
-						<h3>'+ info.numOfReviews +' Reviews</h3>\
-						<h3 class="text-center">'+ info.distance + ' Miles away' + '</h3>\
-						<br><img class="rating-stars-img" src="' + info.rating + '">\
-						<h4 class="text-left snippet">' + info.snippet + '</h4>\
+						<a href="' + info.url +'"</a>\
+						<h4 class="business-name">' + info.name + '</h4></a>\
+						<h5>'+ info.numOfReviews +' Reviews</h5>\
+						<h5>'+ info.distance + ' Miles away' + '</h5>\
+						<img class="rating-stars-img" src="' + info.rating + '">\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
 						<button class="btn dessert-btn">New choice?</button>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);

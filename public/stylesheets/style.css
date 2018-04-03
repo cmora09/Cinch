@@ -27,7 +27,7 @@
 /********** INTRO ***********/
 .mobile.jumbotron {
 	border-radius: 0px !important;
-	width: 350px;
+	/*width: 350px;*/
 	height: 400px;
 }
 
@@ -64,7 +64,7 @@
 .overlap img:nth-child(3) {
 	position: absolute;
 	top: 0;
-	right: -35px;
+	right: -25px;
 	z-index: 3;
 	width: 70%;
 }
@@ -180,6 +180,9 @@
 	}
 }
 /********** FOOD CHOICES PANELS ***********/
+.business-name {
+	font-family: 'Raleway', sans-serif;
+}
 .panel-default>.panel-heading {
 	color: white;
 	background-color: #2c3e50;
@@ -243,10 +246,6 @@ footer img {
 
 
 
-h1 {
-	color: black;
-}
-
 .meal-title{
 	margin: 0;
 	color: #545F69;
@@ -255,28 +254,18 @@ h1 {
 .spin{
 	text-align: middle;
 	position: relative;
-	max-height: 100%;
+	max-height: 50%;
 }
 
 .yelp-img{
 	height: 100%;
 	width: 100%;
+	max-height: 200px;
 }
 
 .yelp-img-cont{
 	overflow: hidden;
 	margin: 0 auto;
-}
-
-.infoname{
-	margin-bottom: 0.5em;
-	letter-spacing: .15em;
-	font-size: 1.4em;
-	color: #333333;
-}
-
-.infoname:hover{
-	color: #999999;
 }
 
 .cta-button {
