@@ -2,31 +2,38 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cinch</title>
-    <link rel="shortcut icon" type="image/png" href="./images/favicon_trans.png" height="16px" width="16px">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Suez+One|Oswald" rel="stylesheet">
+	<link rel="shortcut icon" type="image/png" href="./images/favicon_trans.png" height="16px" width="16px">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Suez+One|Oswald|Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 </head>
 
-<body>	
-    <div class="container main text-center">
-        <div class="container main-img-container">
-        <img src="./images/main-logo.png" width="300" height="200">
-            <h1 class="line-1">Welcome to <span class="cinch_span"style="color:darkorange">Cinch</span></h1>
-            <p class="line-2">Can't figure out what you want to eat?</p>
-            <p class="line-3">Get instant food choices from restaurants near you and create your perfect combination!</p>
-            <button type="button" class="btn btn-default btn-lg cta-button loc-btn">Start now!</button>
-        </div>    
-    </div>
-    <% include partials/food_choices %>
-    <% include partials/footer %>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header navbar-brand-centered">
+				<a href="#">
+					<span class="cinch_span"style="color:#e8581e; font-size: 35px;">Cinch</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid main text-center">
+		<div class="container main-img-container">
+			<h1>Find food fast, with <span class="cinch_span"style="color:#e8581e">Cinch!</span></h1>
+			<button type="button" class="btn btn-default btn-lg cta-button loc-btn">Start now!</button>
+		</div>    
+	</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="/javascript/spin.min.js" type="text/javascript"></script>
-    <script src="/javascript/jquery.spin.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/javascript/script.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<% include partials/food_choices %>
+	<% include partials/footer %>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="/javascript/spin.min.js" type="text/javascript"></script>
+	<script src="/javascript/jquery.spin.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/javascript/script.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -148,6 +148,5 @@ app.post('/yelp-results-desserts', function(req,res){
 });
 
 app.listen(port, function () {
-  console.log('All Right! Thats Cool!');
+  console.log('Localhost running on port 3000');
 });
-// var randomizeResults = Math.floor(Math.random() * 20);
