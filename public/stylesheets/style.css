@@ -14,6 +14,171 @@
 	margin-left: -80px;
 }
 
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-default {
+	background-color: white;
+	border-color: white;
+	height: 80px;
+}
+
+/********** INTRO ***********/
+.mobile.jumbotron {
+	border-radius: 0px !important;
+	width: 350px;
+	height: 400px;
+}
+
+.intro {
+	position: relative;
+	bottom: -14em;
+	font-family: 'Raleway', sans-serif;
+}
+
+.overlap {
+	position: relative;
+}
+
+.overlap img {
+	position: relative;
+	z-index: 3;
+}
+
+.overlap img:nth-child(1) {
+	position: absolute;
+	top: 0;
+	left: -50px;
+	z-index: 1;
+	width: 47%;
+}
+
+.overlap img:nth-child(2) {
+	position: absolute;
+	top: 87px;
+	left: 65px;
+	z-index: 2;
+	width: 60%;
+}
+.overlap img:nth-child(3) {
+	position: absolute;
+	top: 0;
+	right: -35px;
+	z-index: 3;
+	width: 70%;
+}
+
+@media (min-width: 768px) {
+	.mobile.jumbotron {
+		width: 600px;
+	}
+
+	.overlap img:nth-child(1) {
+		top: 0;
+		left: -115px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(2) {
+		top: 70px;
+		left: 50px;
+		width: 50%;
+	}
+
+	.overlap img:nth-child(3) {
+		top: 0;
+		right: -125px;
+		width: 55%;
+	}
+}
+
+@media (min-width: 998px) {
+	.jumbotron {
+		height: 350px;
+		border-radius: 0px;
+	}
+
+	.overlap img:nth-child(1) {
+		top: 17px;
+		left: -200px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(2) {
+		top: 135px;
+		left: -122px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(3) {
+		top: 0;
+		right: -180px;
+		width: 55%;
+	}
+
+	.intro {
+		bottom: -9em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.mobile.jumbotron {
+		height: 300px;
+		border-radius: 0px;
+	}
+
+	.overlap img:nth-child(1) {
+		top: -35px;
+		left: -200px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(2) {
+		top: 89px;
+		left: -122px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(3) {
+		top: 0;
+		right: -180px;
+		width: 55%;
+	}
+
+	.intro {
+		bottom: -7em;
+	}
+}
+
+@media (min-width: 1350px) {
+	.mobile.jumbotron {
+		height: 300px;
+		border-radius: 0px;
+	}
+
+	.overlap img:nth-child(1) {
+		top: -35px;
+		left: -300px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(2) {
+		top: 89px;
+		left: -160px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(3) {
+		top: 0;
+		right: -280px;
+		width: 55%;
+	}
+
+	.intro {
+		bottom: -2em;
+	}
+}
 /********** FOOD CHOICES PANELS ***********/
 .panel-default>.panel-heading {
 	color: white;
@@ -62,6 +227,7 @@ footer a {
 footer p {
 	color: black;
 	font-weight: 700;
+	font-size: 12px;
 }
 
 footer img {
@@ -115,11 +281,8 @@ h1 {
 
 .cta-button {
 	background-color: #e8581e;
-	margin-top: 2em;
-	width: 10em;
 	border: 1.5px white solid;
 	color: white;
-	font-family: 'Oswald', sans-serif;
 }
 
 .cta-button:hover{
