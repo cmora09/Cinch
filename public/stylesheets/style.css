@@ -1,11 +1,11 @@
 .mt-3 { margin-top: 3em; }
 .mb-3 { margin-bottom: 3em; }
+.mb-6 { margin-bottom: 6em;  }
 /********** NAV ***********/
 .navbar-brand-centered {
-	position: absolute;
-	left: 50%;
+	float: none;
 	display: block;
-	width: 160px;
+	padding: 10px 0px 10px 0px;
 	text-align: center;
 }
 
@@ -25,9 +25,8 @@
 }
 
 /********** INTRO ***********/
-.mobile.jumbotron {
+.jumbotron {
 	border-radius: 0px !important;
-	/*width: 350px;*/
 	height: 400px;
 }
 
@@ -69,9 +68,33 @@
 	width: 70%;
 }
 
+/*@media (min-width: 325px) {
+	.overlap img:nth-child(1) {
+		top: 0;
+		left: -55px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(2) {
+		top: 70px;
+		left: 50px;
+		width: 40%;
+	}
+
+	.overlap img:nth-child(3) {
+		top: 0;
+		right: -25px;
+		width: 45%;
+	}
+}*/
+
 @media (min-width: 768px) {
-	.mobile.jumbotron {
+	.jumbotron {
 		width: 600px;
+	}
+
+	.intro h3 {
+		font-size: 30px;
 	}
 
 	.overlap img:nth-child(1) {
@@ -123,7 +146,7 @@
 }
 
 @media (min-width: 1200px) {
-	.mobile.jumbotron {
+	.jumbotron {
 		height: 300px;
 		border-radius: 0px;
 	}
@@ -152,7 +175,7 @@
 }
 
 @media (min-width: 1350px) {
-	.mobile.jumbotron {
+	.jumbotron {
 		height: 300px;
 		border-radius: 0px;
 	}
@@ -183,19 +206,66 @@
 .business-name {
 	font-family: 'Raleway', sans-serif;
 }
+
+.star-rating{
+	width: 100px;
+}
+
+.cinch-span{
+	font-family: 'Suez One', serif;
+}
+
+.refresh-panel {
+	background-color: #2c3e50;
+	color: #eee;
+	text-align: right;
+	padding: 5px 20px 5px 20px;
+	text-align: center;
+}
+
+.spin{
+	text-align: middle;
+	position: relative;
+	max-height: 50%;
+}
+
+.cta-button {
+	background-color: #e8581e;
+	color: white;
+}
+
+.cta-button:hover{
+	background-color: #ea6834;
+	color: white;
+}
+
+.svg-inline--fa {
+	font-size: 30px;
+	width: 100% !important;
+}
+
+.business-pic{
+	height: 100%;
+	width: 100%;
+	max-height: 200px;
+	min-height: 100px;
+}
+
 .panel-default>.panel-heading {
 	color: white;
 	background-color: #2c3e50;
 	border-color: #ddd;
 	text-align: center;
-	height: 60px;
 	border-bottom: none;
+	padding: 20px 0px;
+	font-size: 18px;
 }
 
 .panel {
 	margin-bottom: 0px;
 	border: none;
 	box-shadow: none;
+	margin-bottom: 3em;
 }
 
 .panel.panel-default.col-sm-6.dinner-bg {
@@ -205,6 +275,14 @@
 @media (min-width: 968px) {
 	.panel.panel-default.col-sm-6.dinner-bg {
 		clear: none;
+	}
+
+	.business-pic{
+		min-height: 200px;
+	}
+
+	.refresh-panel {
+		float: left;
 	}
 }
 
@@ -237,71 +315,3 @@ footer img {
 	width: 15%;
 	margin-top: -11px;
 }
-
-
-
-
-
-
-
-
-
-.meal-title{
-	margin: 0;
-	color: #545F69;
-}
-
-.spin{
-	text-align: middle;
-	position: relative;
-	max-height: 50%;
-}
-
-.yelp-img{
-	height: 100%;
-	width: 100%;
-	max-height: 200px;
-}
-
-.yelp-img-cont{
-	overflow: hidden;
-	margin: 0 auto;
-}
-
-.cta-button {
-	background-color: #e8581e;
-	border: 1.5px white solid;
-	color: white;
-}
-
-.cta-button:hover{
-	background-color: #333333;
-	color: white;
-}
-
-.cta-button:visited{
-	background-color: black;
-	color: white;
-}
-
-.breakfast-btn, .lunch-btn, .dinner-btn, .dessert-btn{
-	width: 12em;
-	background-color: #333333;
-	color: white;
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
-
-.breakfast-btn:hover, .lunch-btn:hover, .dinner-btn:hover, .dessert-btn:hover{
-	background-color: #666666;
-	color: white;
-}
-
-.cinch_span{
-	font-family: 'Suez One', serif;
-}
-
-.rating-stars-img{
-	width: 120px;
-}
-
