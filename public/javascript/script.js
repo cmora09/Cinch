@@ -67,13 +67,13 @@ $(document).ready(function(){
 					breakfastDiv.hide();
 					breakfastDiv.html('\
 						<div class="panel-heading">BREAKFAST</div>\
-						<img class="business-pic" src="'+info.img + '">\
+						<div class="business-info"><img class="business-pic" src="'+info.img + '">\
 						<a href="' + info.url +'"</a>\
 						<h4 class="business-name">' + info.name + '</h4></a>\
 						<h5>'+ info.numOfReviews +' Reviews</h5>\
 						<h5>'+ info.distance + ' Miles away' + '</h5>\
 						<img class="star-rating" src="' + info.rating + '">\
-						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p></div>\
 						<div class="refresh-panel"><i class="breakfast-btn fas fa-arrow-right"></i></div>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
@@ -92,13 +92,13 @@ $(document).ready(function(){
 					lunchDiv.hide();
 					lunchDiv.html('\
 						<div class="panel-heading">LUNCH</div>\
-						<img class="business-pic" src="'+info.img + '">\
+						<div class="business-info"><img class="business-pic" src="'+info.img + '">\
 						<a href="' + info.url +'"</a>\
 						<h4 class="business-name">' + info.name + '</h4></a>\
 						<h5>'+ info.numOfReviews +' Reviews</h5>\
 						<h5>'+ info.distance + ' Miles away' + '</h5>\
 						<img class="star-rating" src="' + info.rating + '">\
-						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p></div>\
 						<div class="refresh-panel"><i class="lunch-btn fas fa-arrow-right"></i></div>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
@@ -117,13 +117,13 @@ $(document).ready(function(){
 					dinnerDiv.hide();
 					dinnerDiv.html('\
 						<div class="panel-heading">DINNER</div>\
-						<img class="business-pic" src="'+info.img + '">\
+						<div class="business-info"><img class="business-pic" src="'+info.img + '">\
 						<a href="' + info.url +'"</a>\
 						<h4 class="business-name">' + info.name + '</h4></a>\
 						<h5>'+ info.numOfReviews +' Reviews</h5>\
 						<h5>'+ info.distance + ' Miles away' + '</h5>\
 						<img class="star-rating" src="' + info.rating + '">\
-						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p></div>\
 						<div class="refresh-panel"><i class="dinner-btn fas fa-arrow-right"></i></div>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);
@@ -142,13 +142,13 @@ $(document).ready(function(){
 					dessertDiv.hide();
 					dessertDiv.html('\
 						<div class="panel-heading">DESSERT</div>\
-						<img class="business-pic" src="'+info.img + '">\
+						<div class="business-info"><img class="business-pic" src="'+info.img + '">\
 						<a href="' + info.url +'"</a>\
 						<h4 class="business-name">' + info.name + '</h4></a>\
 						<h5>'+ info.numOfReviews +' Reviews</h5>\
 						<h5>'+ info.distance + ' Miles away' + '</h5>\
 						<img class="star-rating" src="' + info.rating + '">\
-						<br><br><p class="text-left snippet">' + info.snippet + '</p>\
+						<br><br><p class="text-left snippet">' + info.snippet + '</p></div>\
 						<div class="refresh-panel"><i class="dessert-btn fas fa-arrow-right"></i></div>\
 					').fadeIn("slow","swing");
 					spinDiv.spin(false);

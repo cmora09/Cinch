@@ -173,6 +173,11 @@
 	}
 }
 /********** FOOD CHOICES PANELS ***********/
+.business-info {
+	max-height: 500px;
+	min-height: 450px;
+}
+
 .business-name {
 	font-family: 'Raleway', sans-serif;
 }
