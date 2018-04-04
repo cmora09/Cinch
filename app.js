@@ -5,11 +5,11 @@ var dotEnv= require('dotenv').config();
 
 var Yelp = require('yelp');
 var secureYelp = new Yelp({
-	  consumer_key: process.env.consumer_key,
-	  consumer_secret: process.env.consumer_secret,
-	  token: process.env.token,
-	  token_secret: process.env.token_secret
-	});
+	consumer_key: process.env.consumer_key,
+	consumer_secret: process.env.consumer_secret,
+	token: process.env.token,
+	token_secret: process.env.token_secret
+});
 
 //set ejs to default engine
 app.set('view engine', 'ejs');
@@ -31,7 +31,6 @@ app.get('/', function (req, res) {
   res.render('main');
 });
 
-//breakfast ajax
 app.post('/yelp-results-breakfast', function(req,res){
 	secureYelp.search({
 		term: 'food',
@@ -45,7 +44,7 @@ app.post('/yelp-results-breakfast', function(req,res){
 		var random = Math.floor((Math.random() * businesses.length));
 		// console.log(businesses.length + ' ' + 'len')
 		var result = businesses[random];
-		console.log(result);
+		// console.log(result);
 		var resultInfo =
 			{
 			name: result.name,
@@ -59,7 +58,6 @@ app.post('/yelp-results-breakfast', function(req,res){
 		res.send({resultInfo: resultInfo});
 	})
 	.catch(function (err) {
-	  console.error(err);
 	});
 });
 app.post('/yelp-results-lunch', function(req,res){
@@ -86,7 +84,6 @@ app.post('/yelp-results-lunch', function(req,res){
 		res.send({resultInfo: resultInfo});
 	})
 	.catch(function (err) {
-	  console.error(err);
 	});
 });
 
@@ -115,7 +112,6 @@ app.post('/yelp-results-dinner', function(req,res){
 		res.send({resultInfo: resultInfo});
 	})
 	.catch(function (err) {
-	  console.error(err);
 	});
 });
 app.post('/yelp-results-desserts', function(req,res){
@@ -143,10 +139,9 @@ app.post('/yelp-results-desserts', function(req,res){
 		res.send({resultInfo: resultInfo});
 	})
 	.catch(function (err) {
-	  console.error(err);
 	});
 });
 
 app.listen(port, function () {
-  console.log('Localhost running on port 3000');
+	console.log('Localhost running on port 3000');
 });
