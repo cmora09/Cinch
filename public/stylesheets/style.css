@@ -5,7 +5,7 @@
 .navbar-brand-centered {
 	float: none;
 	display: block;
-	padding: 10px 0px 10px 0px;
+	padding: 18px 0px 12px 0px;
 	text-align: center;
 }
 
@@ -20,8 +20,7 @@
 
 .navbar-default {
 	background-color: white;
-	border-color: white;
-	height: 80px;
+	height: 100px;
 }
 
 /********** INTRO ***********/
@@ -68,7 +67,7 @@
 	width: 70%;
 }
 
-/*@media (min-width: 325px) {
+@media (min-width: 340px) {
 	.overlap img:nth-child(1) {
 		top: 0;
 		left: -55px;
@@ -86,7 +85,7 @@
 		right: -25px;
 		width: 45%;
 	}
-}*/
+}
 
 @media (min-width: 768px) {
 	.jumbotron {
@@ -98,13 +97,13 @@
 	}
 
 	.overlap img:nth-child(1) {
-		top: 0;
+		top: -26;
 		left: -115px;
 		width: 40%;
 	}
 
 	.overlap img:nth-child(2) {
-		top: 70px;
+		top: 46px;
 		left: 50px;
 		width: 50%;
 	}
@@ -123,13 +122,13 @@
 	}
 
 	.overlap img:nth-child(1) {
-		top: 17px;
+		top: -55px;
 		left: -200px;
 		width: 40%;
 	}
 
 	.overlap img:nth-child(2) {
-		top: 135px;
+		top: 43px;
 		left: -122px;
 		width: 40%;
 	}
@@ -145,35 +144,6 @@
 	}
 }
 
-@media (min-width: 1200px) {
-	.jumbotron {
-		height: 300px;
-		border-radius: 0px;
-	}
-
-	.overlap img:nth-child(1) {
-		top: -35px;
-		left: -200px;
-		width: 40%;
-	}
-
-	.overlap img:nth-child(2) {
-		top: 89px;
-		left: -122px;
-		width: 40%;
-	}
-
-	.overlap img:nth-child(3) {
-		top: 0;
-		right: -180px;
-		width: 55%;
-	}
-
-	.intro {
-		bottom: -7em;
-	}
-}
-
 @media (min-width: 1350px) {
 	.jumbotron {
 		height: 300px;
@@ -182,20 +152,20 @@
 
 	.overlap img:nth-child(1) {
 		top: -35px;
-		left: -300px;
-		width: 40%;
+		left: -500px;
+		width: 55%;
 	}
 
 	.overlap img:nth-child(2) {
 		top: 89px;
-		left: -160px;
-		width: 40%;
+		left: -260px;
+		width: 50%;
 	}
 
 	.overlap img:nth-child(3) {
 		top: 0;
-		right: -280px;
-		width: 55%;
+		right: -380px;
+		width: 75%;
 	}
 
 	.intro {
@@ -213,6 +183,8 @@
 
 .cinch-span{
 	font-family: 'Suez One', serif;
+	color:#e8581e; 
+	font-size: 35px;
 }
 
 .refresh-panel {
@@ -295,7 +267,7 @@ footer.container-fluid {
 	font-family: 'Raleway', sans-serif;
 }
 
-footer h5 {
+footer h4 {
 	color: white;
 	padding: 1em 0em 1em 0em;
 }
@@ -308,7 +280,6 @@ footer a {
 footer p {
 	color: black;
 	font-weight: 700;
-	font-size: 12px;
 }
 
 footer img {
