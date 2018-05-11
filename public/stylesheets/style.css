@@ -33,10 +33,6 @@
 	font-family: 'Raleway', sans-serif;
 }
 
-.intro-container {
-	height: 50vh;
-}
-
 .overlap {
 	position: relative;
 }
@@ -87,9 +83,9 @@
 		right: -25px;
 		width: 45%;
 	}
-}
+}*/
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
 	.jumbotron {
 		width: 600px;
 	}
@@ -116,37 +112,14 @@
 		width: 55%;
 	}
 }
-
+*/
 @media (min-width: 998px) {
-	.jumbotron {
-		height: 350px;
-		border-radius: 0px;
-	}
-
-	.overlap img:nth-child(1) {
-		top: -55px;
-		left: -200px;
-		width: 40%;
-	}
-
-	.overlap img:nth-child(2) {
-		top: 43px;
-		left: -122px;
-		width: 40%;
-	}
-
-	.overlap img:nth-child(3) {
-		top: 0;
-		right: -180px;
-		width: 55%;
-	}
-
-	.intro {
-		bottom: -9em;
+	.intro-container {
+		height: 50vh;
 	}
 }
 
-@media (min-width: 1350px) {
+/*@media (min-width: 1350px) {
 	.jumbotron {
 		height: 300px;
 		border-radius: 0px;
