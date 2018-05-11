@@ -1,4 +1,5 @@
 .mt-3 { margin-top: 3em; }
+.mt-6 { margin-top: 6em; }
 .mb-3 { margin-bottom: 3em; }
 .mb-6 { margin-bottom: 6em;  }
 /********** NAV ***********/
@@ -14,10 +15,6 @@
 	margin-left: -80px;
 }
 
-.navbar {
-	margin-bottom: 0px;
-}
-
 .navbar-default {
 	background-color: white;
 	height: 100px;
@@ -26,13 +23,18 @@
 /********** INTRO ***********/
 .jumbotron {
 	border-radius: 0px !important;
-	height: 400px;
+	max-width: 700px;
+	/*height: 400px;*/
 }
 
 .intro {
-	position: relative;
-	bottom: -14em;
+	/*position: relative;*/
+	/*bottom: -14em;*/
 	font-family: 'Raleway', sans-serif;
+}
+
+.intro-container {
+	height: 50vh;
 }
 
 .overlap {
@@ -67,7 +69,7 @@
 	width: 70%;
 }
 
-@media (min-width: 340px) {
+/*@media (min-width: 340px) {
 	.overlap img:nth-child(1) {
 		top: 0;
 		left: -55px;
@@ -171,7 +173,7 @@
 	.intro {
 		bottom: -2em;
 	}
-}
+}*/
 /********** FOOD CHOICES PANELS ***********/
 .business-info {
 	max-height: 500px;
